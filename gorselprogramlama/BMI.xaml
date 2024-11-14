@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="gorselprogramlama.BMI"
+             Title="Vücut Kitle İndeksi Hesaplama">
+    <StackLayout Padding="30" Spacing="20" VerticalOptions="CenterAndExpand">
+
+        <!-- Kilo girişi (kg) -->
+        <Label Text="Kilo (kg)" FontSize="Medium" HorizontalOptions="Center" />
+        <Entry x:Name="KiloGirdisi" Keyboard="Numeric" Placeholder="Kilonuzu girin" />
+
+        <!-- Boy girişi (cm) -->
+        <Label Text="Boy (cm)" FontSize="Medium" HorizontalOptions="Center" />
+        <Entry x:Name="BoyGirdisi" Keyboard="Numeric" Placeholder="Boyunuzu girin" />
+
+        <!-- Hesapla butonu -->
+        <Button Text="Hesapla" Clicked="VkiHesapla" BackgroundColor="Navy" TextColor="White" CornerRadius="10" />
+
+        <!-- VKİ sonucu -->
+        <Label Text="Vücut Kitle İndeksi (VKİ):" FontSize="Medium" HorizontalOptions="Center" />
+        <Label x:Name="VkiLabel" Text="0" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center" />
+
+        <!-- VKİ kategorisi -->
+        <Label x:Name="KategoriLabel" Text="Kategoriniz: " FontSize="Medium" HorizontalOptions="Center" TextColor="red" />
+
+    </StackLayout>
+</ContentPage>

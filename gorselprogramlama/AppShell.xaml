@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:gorselprogramlama"
+       x:Class="gorselprogramlama.AppShell">
+
+    <!-- sol menü tanımlaması -->
+    <FlyoutItem Title="Ana Sayfa" Icon="home.png">
+        <!-- Ana sayfa içeriği -->
+        <ShellContent Title="Ana Sayfa" ContentTemplate="{DataTemplate local:MainPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Kredi Hesaplama" Icon="finance.png"> <!--ikon ekledik-->
+        <!-- Kredi hesaplama içeriği -->
+        <ShellContent Title="Kredi Hesaplama" ContentTemplate="{DataTemplate local:Kredi}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Vücut Kitle İndeksi" Icon="healthy.png"> <!--ikon ekledik-->
+      
+        <!-- Vücut kitle indeksi içeriği -->
+        <ShellContent Title="Vücut Kitle İndeksi" ContentTemplate="{DataTemplate local:BMI}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Renk Seçici" Icon="palette.png"> <!--ikon ekledik-->
+        <!-- Renk seçici içeriği -->
+        <ShellContent Title="Renk Seçici" ContentTemplate="{DataTemplate local:Renkseçme}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Yapılacaklar" Icon="list.png"> <!--ikon ekledik-->
+        <!-- Yapılacaklar içeriği -->
+        <ShellContent Title="Yapılacaklar" ContentTemplate="{DataTemplate local:Yapılacaklar}" />
+    </FlyoutItem>
+
+</Shell>

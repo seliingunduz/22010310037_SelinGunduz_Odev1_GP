@@ -1,0 +1,14 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:gorselprogramlama"
+             x:Class="gorselprogramlama.App">
+    <Application.Resources>
+        <ResourceDictionary>    <!--kaynakları topladığımız alan-->
+            <ResourceDictionary.MergedDictionaries> <!--birden fazla kaynak toplamak için-->
+                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />  <!-- uygulama renkleri için -->
+                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />  <!-- stil tanımlamak için -->
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="gorselprogramlama.Kredi"
+             Title="Kredi Hesaplama">
+
+    <StackLayout Padding="20">
+
+        <!-- Kredi türü seçmek için -->
+        <Label Text="Kredi Türünü Seçin:" FontSize="Medium" TextColor="Navy" />
+        
+        <Button x:Name="KrediTürüSeçButonu"
+                Text="Kredi Türünü Seçiniz"
+                BackgroundColor="Navy"
+                TextColor="White"
+                HeightRequest="50"
+                Clicked="KrediTürüSeçButonu_Clicked"/>
+
+        <!-- Kredi miktarı için -->
+        <Label Text="Kredi Tutarı (TL)" />
+        <Entry x:Name="LoanAmountEntry" Keyboard="Numeric" BackgroundColor="AliceBlue" TextColor="Navy" />
+
+        <!-- Faiz oranı için -->
+        <Label Text="Aylık Faiz Oranı (%)" />
+        <Entry x:Name="InterestRateEntry" Keyboard="Numeric" BackgroundColor="AliceBlue" TextColor="Navy" />
+
+        <!-- Vade süresi için -->
+        <Label Text="Vade (Ay)" />
+
+        <!-- Örnekten farklı olsun diyekaydırıcıyla yaptım-->
+        <Slider x:Name="LoanTermSlider" 
+                Minimum="1" Maximum="72" 
+                Value="12" 
+                ThumbColor="Navy"
+                ValueChanged="LoanTermSlider_ValueChanged" />
+
+        <!-- Kaydırıcı ilk açıldığın 3 ayla açılsın diye -->
+        <Label x:Name="TermLabel" 
+               Text="3 Ay" 
+               FontSize="Medium" 
+               HorizontalOptions="Center" 
+               TextColor="Navy" />
+
+        <!-- Hesapla butonu -->
+        <Button Text="Hesapla" Clicked="OnCalculateClicked" BackgroundColor="Navy" TextColor="White" Margin="0,10"/>
+
+        <!-- Sonuçlar-->
+        <Label Text="Aylık Taksit:" />
+        <Label x:Name="MonthlyPaymentLabel" Text="0 TL" TextColor="Navy" />
+
+        <Label Text="Toplam Ödeme:" />
+        <Label x:Name="TotalPaymentLabel" Text="0 TL" TextColor="Navy" />
+
+        <Label Text="Toplam Faiz:" />
+        <Label x:Name="TotalInterestLabel" Text="0 TL" TextColor="Navy" />
+
+    </StackLayout>
+</ContentPage>
